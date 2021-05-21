@@ -84,6 +84,13 @@
       "kor": "단어",
       "isDone": false,
       "id": 12
+    },
+    {
+      "day": "3",
+      "eng": "bear",
+      "kor": "곰",
+      "isDone": false,
+      "id": 13
     }
   ]
 }

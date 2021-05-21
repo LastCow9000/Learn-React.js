@@ -1,7 +1,11 @@
 /* eslint-disable */
 import React, { useState } from 'react';
 import './App.css';
-
+import Headers from './component/Header';
+import DayList from './component/DayList';
+import Day from './component/Day';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import EmptyPage from './component/EmptyPage';
 
 const App = () => {
 
@@ -11,6 +15,35 @@ const App = () => {
 
   return (
     <div className="App">
+      <BrowserRouter>
+        <div className="wordHistory">
+          <Headers />
+          <Switch>
+            <Route exact path="/">
+              <DayList />
+            </Route>\
+            <Route path="/day/:day">
+              <Day />
+            </Route>
+            <Route>
+              <EmptyPage />
+            </Route>
+          </Switch>
+        </div>
+      </BrowserRouter>
+      <hr />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <div className="black-nav">
         개발 Blog
       </div>
@@ -30,6 +63,8 @@ const App = () => {
         <p>{content}</p>
         <hr />
       </div>
+
+
     </div>
   );
 }

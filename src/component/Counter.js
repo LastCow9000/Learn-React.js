@@ -1,7 +1,7 @@
 import { useReducer, useState } from 'react';
 
 export default function Counter() {
-  
+
   const ACTION = {
     INCREMENT: 'increment',
     DECREMENT: 'decrement'
@@ -12,14 +12,14 @@ export default function Counter() {
       case ACTION.INCREMENT:
         return { count: state.count + 1 }
       case ACTION.DECREMENT:
-        return { count: state.count - 1}
+        return { count: state.count - 1 }
       default:
         return state
-      };
+    };
   }
 
   const [state, dispatch] = useReducer(reducer, { count: 0 });
-  
+
   function increment() {
     dispatch({ type: ACTION.INCREMENT })
   }
@@ -27,12 +27,12 @@ export default function Counter() {
   function decrement() {
     dispatch({ type: ACTION.DECREMENT })
   }
-  
+
   return (
     <>
-    <button onClick={decrement}>-</button>
-    <span>{state.count}</span>
-    <button onClick={increment}>+</button>
+      <button onClick={decrement}>-</button>
+      <span>{state.count}</span>
+      <button onClick={increment}>+</button>
     </>
   );
 

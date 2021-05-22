@@ -9,6 +9,9 @@ import EmptyPage from './component/EmptyPage';
 import CreateWord from './component/CreateWord';
 import CreateDay from './component/CreateDay';
 
+import Counter from './component/Counter';
+import ToDos from './component/ToDos';
+
 const App = () => {
 
   let [title, setTitle] = useState(['콜라의 역사', '사이다의 역사', '환타의 역사']);
@@ -52,6 +55,25 @@ const App = () => {
       <br />
       <br />
       <br />
+      <h2>Counter</h2>
+      <div className="Counter">
+        <Counter/>
+      </div>
+      <br />
+      <br />
+      <br />
+      <div className="ToDos">
+        <ToDos/>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <hr />
       <div className="black-nav">
         개발 Blog
       </div>
@@ -71,7 +93,6 @@ const App = () => {
         <p>{content}</p>
         <hr />
       </div>
-
 
     </div>
   );
